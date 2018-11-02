@@ -1,0 +1,8 @@
+<h3>What's the doses for your <%= @cocktail.name %>?</h3>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, collection: @ingredients %>
+  <%= f.submit "Add the doses", class: "btn btn-success" %>
+<% end %>
+
